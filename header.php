@@ -1,4 +1,8 @@
-<html>
+<?php
+    session_start();
+
+?>
+   <html>
     <head>
         <title>Car Rental</title>
 
@@ -60,10 +64,33 @@
                             <ul class="nav navbar-nav navbar-left lists">
                                 <li><a href="index.php" >Home </a></li> 
                                 <li><a href="#">Booking</a></li>
-                                <li><a href="#" >About</a></li>                                                                
+                                <li><a href="about.php" >About</a></li>                                                                
                                 <li><a href="#" >Contact</a></li>
                                 
-                                    <li><a href="signup.php">Signup/login</a></li>                                                          
+                                 <?php
+                        
+                                if(isset($_SESSION['user']))
+                                {
+                                    include('connect.php');
+                                    
+                                    $sql = "select * from userdetails where email = '".$_SESSION['user']."'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $data = mysqli_fetch_array($res);
+                                               
+                                    ?>
+                                    <li><a href="update_user.php?id=<?php echo $data['id']; ?>">Welcome : <?php echo $data['name']; ?></a></li>
+                                     <li><a href="user-logout.php"><span class="glyphicon glyphicon-off" title="Logout"></span></a></li>
+                                    <?php
+                                }
+                                else
+                                {
+                                    ?>
+                                    <li><a href="UserDetails.php">Signup/login</a></li>
+                                    <?php
+                                    
+                                }
+                        ?>
+                                    
                             </ul>
                         </div>                                                                                      
                     </nav>
