@@ -56,7 +56,7 @@
                     <nav class="navbar navbar-default navigation">
                         <div class="navbar-header">
                             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navb">
-                                <i class="glyphicon glyphicon-align-center"></i>    
+                                <i class="glyphicon glyphicon-align-center short"></i>    
                             </button>
                         </div>                                            
                         

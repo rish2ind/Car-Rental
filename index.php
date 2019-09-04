@@ -5,13 +5,6 @@
             <div class="row">
                 <img src="Images/car2.png" alt="" class="img-responsive">
             </div>
-          <!--  <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6"  style="position: relative; top:-300px; text-align: center; color: black; font-size: 25px; ">
-                   
-                        <p><sup><i class="fas fa-quote-left"></i></sup> Some beautiful paths can't be <br>discovered without getting lost. <sup><i class="fas fa-quote-right"></i></sup></p>            
-                </div>
-            </div>-->
         </div>
         <div class="container-fluid">
             <div class="row">

@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
 .navigation{
     background-color: #27368a; 
     padding: 24px;
@@ -8,6 +12,15 @@
 }
 .navigation .lists li a:hover{
     color: white;
+}
+.short{
+    color: white;
+}
+.collapsed:hover .short{
+    color: black;
+}
+.collapsed:visited .short{
+    color: black;
 }
 .logo
 {
@@ -37,5 +50,7 @@
     font-size: 18px;
     font-family: 'Century Gothic';
     border: 2px solid #ab8514;
-    border-radius: 10px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 2px 3px 8px;
 }

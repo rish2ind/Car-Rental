@@ -100,8 +100,8 @@
                         <input type="email" class="form-control" required="" name="email" placeholder="Email address" style="background-color: #f1f1f1; padding: 10px; border: none;">
                     </div>
                     <div class="form-group">
-                        <lable>Password : </lable>
-                        <input type="password" class="form-control" required="" name="password">
+                       
+                        <input type="password" class="form-control" required="" name="password" placeholder="Enter password"  style="background-color: #f1f1f1; padding: 10px; border: none;">
                     </div>
                     
                     <div class="form-group">
@@ -141,4 +141,8 @@
                         }
                 
         ?>
+        <br>
 </body>
+<?php
+    include('footer.php');
+?>
