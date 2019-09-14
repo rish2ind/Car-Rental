@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    
 }
 .navigation{
     background-color: #27368a; 
@@ -53,4 +54,46 @@ body{
     border-radius: 15px;
     padding: 25px;
     box-shadow: 2px 3px 8px;
+}
+.work{
+    text-align: justify;
+    font-family: 'Arial';
+    margin-bottom: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    height: 200px;
+    background-color: #f1f1f1;
+    font-size: 18px;
+}
+.work-icon{
+    margin-left: 45%;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #028402;
+    
+}
+.car-image{
+    border-right: 1px solid gray;;
+    
+    height: 120px
+}
+.price{
+    font-size: 25px;
+    color: green;
+    text-align: center;
+}
+.car-details{
+    padding: 10px;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.4);
+    margin-top: 10px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #80ff80;
 }

@@ -18,6 +18,40 @@
                 <div class="col-md-3 cars"><img src="Images/tata.jpg" alt="" class="img-responsive"><p class="car-details">LARGE: SUV</p><p class="names">EXAMPLE OF THIS RANGE: TATA SAFARI</p></div>
                 <div class="col-md-3 cars"><img src="Images/honda.jpg" alt="" class="img-responsive"><p class="car-details">LARGE: PREMIUM</p><p class="names">EXAMPLE OF THIS RANGE: HONDA CITY</p></div>
             </div>
+            <div class="row">
+                <center><a href="car_booking.php"><button style="background-color: transparent; border: 1px solid black; border-radius: 3px; margin-top: 20px; width: 400px; padding: 5px; color: black; font-family: 'Arial'; letter-spacing: 13px;" onmouseover="this.style.backgroundColor='#ffe4fb'" onmouseout="this.style.backgroundColor='transparent'"><h4>BOOK YOUR CAR</h4></button></a></center>
+            </div>
+        </div>
+        <div class="container-fluid">
+             <div class="row" style="text-align: center; margin-top: 25px;"><h3>HOW TO BOOK YOUR CAR</h3><span style="font-size: 16px;">
+Drive yourself to an adventure and back in 4 simple steps</span></div>
+            <div class="row" style="margin-top: 30px;">             
+                <div class="col-md-3 work">
+                   <i class="fas fa-car work-icon"></i>
+                    <p style="text-align: center">BOOK</p>
+                    <p>Search for and book a car on our site!</p>
+                </div>
+                <div class="col-md-3 work">
+                   <i class="far fa-id-badge work-icon"></i>
+                    <p style="text-align: center">UPLOAD LICENSE</p>
+                    <p>Upload your driver&#39;s license, and pay a small security deposit.</p>
+                </div>
+                <div class="col-md-3 work">
+                   <i class="fas fa-unlock-alt work-icon"></i>
+                    <p style="text-align: center">UNLOCK</p>
+                    <p>We SMS your car details 20 minutes before pickup. Unlock it via the Zoomcar app.
+
+</p>
+                </div>
+                <div class="col-md-3 work">
+                   <i class="fas fa-undo work-icon"></i>
+                    <p style="text-align: center">RETURN</p>
+                    <p>Return the car to the same location and fill the end checklist to end your trip.</p>
+                </div>
+            </div>
+            <div class="row">
+                <center><a href="UserDetails.php"><button style="padding: 8px; width: 170px; color: black; background-color: transparent; border: 1px solid black; border-radius: 3px; margin-bottom: 20px;" onmouseover="this.style.border='1px solid green'" onmouseout="this.style.border='1px solid black'">Sign Up</button></a></center>
+            </div>
         </div>
         <div class="container-fluid">
             <div class="row"></div>
