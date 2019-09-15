@@ -73,9 +73,8 @@ body{
     
 }
 .car-image{
-    border-right: 1px solid gray;;
-    
-    height: 120px
+    border-right: 1px solid gray;    
+    height: 120px;
 }
 .price{
     font-size: 25px;
@@ -84,8 +83,14 @@ body{
 }
 .car-details{
     padding: 10px;
-    box-shadow: 2px 0px 10px rgba(0,0,0,0.4);
+    box-shadow: 2px 0px 15px rgba(0,0,0,0.2);
     margin-top: 10px;
+}
+.checkout{
+    border: 1px solid gray;
+    margin: 10% 0 10% 0;
+    
+    padding: 10px;
 }
 ::-webkit-scrollbar{
     width: 10px;

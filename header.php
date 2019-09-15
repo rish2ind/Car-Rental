@@ -63,7 +63,7 @@
                             <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
                                 <li><a href="index.php" >Home </a></li> 
-                                <li><a href="car_booking.php">Booking</a></li>
+                                <li><a href="pickup_time.php">Booking</a></li>
                                 <li><a href="about.php" >About</a></li>                                                                
                                 <li><a href="#" >Contact</a></li>
                                 

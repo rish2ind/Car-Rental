@@ -19,7 +19,7 @@
                 <div class="col-md-3 cars"><img src="Images/honda.jpg" alt="" class="img-responsive"><p class="car-details">LARGE: PREMIUM</p><p class="names">EXAMPLE OF THIS RANGE: HONDA CITY</p></div>
             </div>
             <div class="row">
-                <center><a href="car_booking.php"><button style="background-color: transparent; border: 1px solid black; border-radius: 3px; margin-top: 20px; width: 400px; padding: 5px; color: black; font-family: 'Arial'; letter-spacing: 13px;" onmouseover="this.style.backgroundColor='#ffe4fb'" onmouseout="this.style.backgroundColor='transparent'"><h4>BOOK YOUR CAR</h4></button></a></center>
+                <center><a href="pickup_time.php"><button style="background-color: transparent; border: 1px solid black; border-radius: 3px; margin-top: 20px; width: 400px; padding: 5px; color: black; font-family: 'Arial'; letter-spacing: 13px;" onmouseover="this.style.backgroundColor='#ffe4fb'" onmouseout="this.style.backgroundColor='transparent'"><h4>BOOK YOUR CAR</h4></button></a></center>
             </div>
         </div>
         <div class="container-fluid">
