@@ -15,7 +15,14 @@
  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
          <!-- Bootstrap Js CDN -->
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+  
+        <!--  jQuery Files -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+         <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
                         <!--  External CSS File    -->
  <link rel="stylesheet" href="style.css">                        
     </head>

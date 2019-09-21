@@ -37,7 +37,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 4,499
                 <p>
-                    <center><a href="#"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_maruti.php"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
@@ -57,7 +57,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 7,599
                 <p>
-                    <center><a href="#"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_hyundai.php"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
@@ -77,7 +77,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 8,499
                 <p>
-                    <center><a href="#"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_tata.php"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>

@@ -89,7 +89,6 @@ body{
 .checkout{
     border: 1px solid gray;
     margin: 10% 0 10% 0;
-    
     padding: 10px;
 }
 ::-webkit-scrollbar{

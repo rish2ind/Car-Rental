@@ -1,6 +1,6 @@
 <?php
     include('header.php');
-
+    if(isset($_SESSION['user'])){
 ?>
 
 <div class="container">
@@ -13,10 +13,13 @@
             <hr>
             <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;6,500</span></div>
         </div>
-        <div class="col-md-4">
-            <img src="Images/honda.jpg" alt="" class="img-responsive">
+        <div class="col-md-4 checkout" style="margin-left: 10px;">
+           <center> <img src="Images/honda.jpg" alt="" class="img-responsive"></center>
+            <center><h2>HONDA CITY</h2></center>
+             <center>   <h4>(5 SEATER)</h4></center>
             
         </div>
+        <a href="final_booking.php"><center><button class="btn btn-success" style="position: relative; top: -100px;">CHECKOUT</button></center></a>
     </div>
 </div>
 
@@ -26,5 +29,11 @@
 <?php
 
 include('footer.php');
-
+    }
+else{
+    echo "<script> 
+            alert('Please login First');
+            window.location.href = 'UserDetails.php';
+        </script>";
+}
 ?>
