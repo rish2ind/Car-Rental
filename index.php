@@ -48,10 +48,15 @@ Drive yourself to an adventure and back in 4 simple steps</span></div>
                     <p style="text-align: center">RETURN</p>
                     <p>Return the car to the same location and fill the end checklist to end your trip.</p>
                 </div>
-            </div>
+            </div><?php if(isset($_SESSION['user'])){ ?>
+            
+            
+            <?php } else { ?>
             <div class="row">
                 <center><a href="UserDetails.php"><button style="padding: 8px; width: 170px; color: black; background-color: transparent; border: 1px solid black; border-radius: 3px; margin-bottom: 20px;" onmouseover="this.style.border='1px solid green'" onmouseout="this.style.border='1px solid black'">Sign Up</button></a></center>
             </div>
+               <?php } ?>
+                
         </div>
         <div class="container-fluid">
             <div class="row"></div>

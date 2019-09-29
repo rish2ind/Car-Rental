@@ -85,7 +85,7 @@
                                     $data = mysqli_fetch_array($res);
                                                
                                     ?>
-                                    <li><a href="update_user.php?id=<?php echo $data['id']; ?>">Welcome : <?php echo $data['name']; ?></a></li>
+                                    <li><a href="user_profile.php?id=<?php echo $data['id']; ?>">Welcome : <?php echo $data['name']; ?></a></li>
                                      <li><a href="logout.php"><span class="glyphicon glyphicon-off" title="Logout"></span></a></li>
                                     <?php
                                 }

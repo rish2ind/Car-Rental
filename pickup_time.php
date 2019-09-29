@@ -6,12 +6,12 @@
             $email = $_POST['email'];
             $mobile= $_POST['mobile'];
             $address = $_POST['address'];
-            $pick_date = $_POST['pick_date'];
-           
+            $pick_date = $_POST['pick_date'];           
             $drop_date = $_POST['drop_date'];
-           
+            $card_number = 0;
             
-            $sql = "insert into user_journey (name, email, mobile, address, pick_date, drop_date) values ('$name', '$email', '$mobile', '$address', '$pick_date',  '$drop_date')";
+            
+            $sql = "insert into user_journey (name, email, mobile, address, pick_date, drop_date, card_number) values ('$name', '$email', '$mobile', '$address', '$pick_date',  '$drop_date', '$card_number')";
             $run = mysqli_query($conn, $sql);
             if($run){
                 echo "<script> alert ('Your details have been saved');
@@ -78,14 +78,14 @@
         <hr>
         <div class="form-group">
             <lable>Pickup Date</lable>
-            <input type="text" class="form-control" name="pick_date" required="" id="pickdate" placeholder="mm-dd-yyyy">
+            <input type="text" class="form-control" name="pick_date" required="" id="date" placeholder="mm-dd-yyyy">
         </div>
         <hr>
        
         <hr>
         <div class="form-group">
             <lable>Drop Date</lable>
-            <input type="date" class="form-control" name="drop_date" required="">
+            <input type="text" class="form-control" name="drop_date" required="" id="date1" placeholder="mm-dd-yyyy">
         </div>
         <hr>
         
@@ -97,13 +97,14 @@
     </div>   
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoQ_S7YXN4Cj0DLsjE2SWKn5zWL4WHoiw&libraries=places&callback=autocompleteAddress"></script>
-<script>
-    $('#pickdate').datepicker({
-        showOtherMonths: true,
-        changeYear: true,
-        changeMonth: true
-    });
-</script>
+ <script>
+            $('#date').datepicker({
+                minDate : 0
+            });
+            $('#date1').datepicker({
+                minDate : 0
+            });
+        </script>
 <?php
     include('footer.php');
     }
