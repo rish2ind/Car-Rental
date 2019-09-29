@@ -1,7 +1,27 @@
 <?php
     include('header.php');
+ include('connect.php');
 if(isset($_SESSION['user'])){
+    if(isset($_POST['book'])){
+        $card_number = $_POST['card_number'];
+        $cvv = $_POST['CVV'];
+        $expire = $_POST['expire'];
+        $sql = "update user_journey set card_number = '$card_number', CVV = '$cvv', expire = '$expire' where email = '".$_SESSION['user']."'";
+        $run = mysqli_query($conn, $sql);
+        if($run){
+            echo "<script> alert('Your Booking has been confirmed'); 
+                window.location.href = 'index.php';
+            </script>";
+        }
+        else{
+            echo "<script> alert('Booking Failed');         
+            </script>";
+        }
+    }
 ?>
+<body onload="document.payment.card_number.focus();">
+    
+
 <div class="container">
     <div class="row checkout">
         
@@ -11,7 +31,7 @@ if(isset($_SESSION['user'])){
         <div class="col-md-4" style="background-color: #39406d; border-radius: 10px;">
         <h3 style="color: white;">Payment Methods</h3><hr>
             <div class="payment">
-                <center><form action="" method="post">
+                <center><form action="" name="payment" method="post" onsubmit="return validate()">
                    <h4 style="color: white;">Card Payment</h4>
                     <div class="form-group">                         
                         <input type="text" name="card_number" class="form-control" placeholder="Enter Card Number" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
@@ -31,6 +51,38 @@ if(isset($_SESSION['user'])){
     </div>
     <a href="#"><center><button class="btn btn-success" style="position: relative; top: -100px;">BOOK NOW</button></center></a>
 </div>
+<script>
+        function validate(){
+            var card = document.payment.card_number.value;
+            var cvv = document.payment.CVV.value;
+            
+            if(isNaN(card)){
+                alert ('Card Number should contain digits only !!');
+                card_number.focus();
+                return false;
+            }
+            else if(card.length < 16 || card.length >16){
+                alert ('Card should contain 16 digits only');
+                card_number.focus();
+                return false;
+            }
+            else if(isNaN(cvv)){
+                alert ('CVV should contain digits only !!');
+                CVV.focus();
+                return false;
+            }
+            else if(cvv.length < 3 || cvv.length >3){
+                alert ('CVV should contain 3 digits only');
+                CVV.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    
+    </script>
+    </body>
 <?php
     include('footer.php');
 }

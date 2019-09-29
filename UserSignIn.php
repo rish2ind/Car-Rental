@@ -2,7 +2,7 @@
     include('header.php');
     include('connect.php');
 ?>
-            <body class="signupuser">
+            <body class="signupuser" onload="document.signin_form.email.focus();">
                 
             
              <div class="container-fluid" style="">
@@ -12,11 +12,11 @@
                <h2 style="color: white; text-align: center;">Sign In</h2>
                <p style="color: gold; text-align: center;">Sign in to your account</p>
             <div class="form-container">
-                <form action="" class="contact-form" method="post">
+                <form action="" class="contact-form" method="post" name="signin_form">
                     
                     <div class="form-group">
                         <lable style="color: gold;">Email : </lable>
-                        <input type="email" class="form-control" required="" name="email">
+                        <input type="email" class="form-control" required="" name="email" id="email">
                     </div>
                     <div class="form-group">
                         <lable style="color: gold;">Password : </lable>
