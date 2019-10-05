@@ -10,7 +10,7 @@ if(isset($_SESSION['user'])){
         $run = mysqli_query($conn, $sql);
         if($run){
             echo "<script> alert('Your Booking has been confirmed'); 
-                window.location.href = 'index.php';
+                window.location.href = 'user_profile.php';
             </script>";
         }
         else{
@@ -19,9 +19,8 @@ if(isset($_SESSION['user'])){
         }
     }
 ?>
+<meta http-equiv="refresh" content="300;url=car_booking.php">
 <body onload="document.payment.card_number.focus();">
-    
-
 <div class="container">
     <div class="row checkout">
         
@@ -31,13 +30,14 @@ if(isset($_SESSION['user'])){
         <div class="col-md-4" style="background-color: #39406d; border-radius: 10px;">
         <h3 style="color: white;">Payment Methods</h3><hr>
             <div class="payment">
-                <center><form action="" method="post" name="payment" onsubmit="return validate();">
+                <center><form action="" method="post" name="payment" onsubmit="return validate()">
                    <h4 style="color: white;">Card Payment</h4>
                     <div class="form-group">                         
-                        <input type="text" name="card_number" class="form-control" placeholder="Enter Card Number" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
+                        <input type="text" name="card_number" class="form-control" id="cnumber" placeholder="Enter Card Number" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
                     
-                        <input type="text" name="CVV" class="form-control" placeholder="CVV" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
+                        <input type="text" name="CVV" class="form-control" id="ccvv" placeholder="CVV" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
                         <input type="text" name="expire" class="form-control" placeholder="mm/yyyy" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
+                         <input type="submit" class="btn btn-success" name="book" value="BOOK">
                     </div>
                 </form></center>    
             </div>
@@ -49,8 +49,9 @@ if(isset($_SESSION['user'])){
                 <center><h4>( 5 SEATER)</h4></center>
         </div>
     </div>
-    <a href="#"><center><button class="btn btn-success" style="position: relative; top: -100px;">BOOK NOW</button></center></a>
+   <a href="car_booking.php"><center><button class="btn btn-success" style="position: relative; top: -100px;">CANCLE</button></center></a>
 </div>
+<!--
 <script>
         function validate(){
             var card = document.payment.card_number.value;
@@ -82,6 +83,9 @@ if(isset($_SESSION['user'])){
         }
     
     </script>
+-->
+        <center><sup style="color: red">*</sup>Page will be redirected automaticaly to the Car Booking page after 300 seconds.</center>
+     <script src="validation.js"></script>
     </body>
 <?php
     include('footer.php');
