@@ -1,5 +1,6 @@
 <?php
     include('header.php');
+    include('connect.php');
     if(isset($_SESSION['user'])){
 ?>
 
@@ -16,8 +17,11 @@
             <div class="col-md-2 car-image price">
                 <i class="fas fa-rupee-sign"></i>
                 6,500
-                <p>
-                    <center><a href="checkout.php"><button class="btn btn-success">BOOK NOW</button></a></center>
+                <p><?php 
+           $sql = "select * from userdetails where email = '".$_SESSION['user']."'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $data = mysqli_fetch_array($res); ?>
+                    <center><a href="checkout.php?id=<?php echo $data['id']; ?>"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
@@ -37,7 +41,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 4,499
                 <p>
-                    <center><a href="checkout_maruti.php"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_maruti.php?id=<?php echo $data['id']; ?>"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
@@ -57,7 +61,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 7,599
                 <p>
-                    <center><a href="checkout_hyundai.php"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_hyundai.php?id=<?php echo $data['id']; ?>"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
@@ -77,7 +81,7 @@
                 <i class="fas fa-rupee-sign"></i>
                 8,499
                 <p>
-                    <center><a href="checkout_tata.php"><button class="btn btn-success">BOOK NOW</button></a></center>
+                    <center><a href="checkout_tata.php?id=<?php echo $data['id']; ?>"><button class="btn btn-success">BOOK NOW</button></a></center>
                 </p>
             </div>
         </div>
