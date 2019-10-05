@@ -39,7 +39,7 @@ Drive yourself to an adventure and back in 4 simple steps</span></div>
                 <div class="col-md-3 work">
                    <i class="fas fa-unlock-alt work-icon"></i>
                     <p style="text-align: center">UNLOCK</p>
-                    <p>We SMS your car details 20 minutes before pickup. Unlock it via the Zoomcar app.
+                    <p>We SMS your car details 20 minutes before pickup.
 
 </p>
                 </div>

@@ -10,7 +10,7 @@
             $run = mysqli_query($conn, $sql);
             if($run){
                 echo "<script> alert('Your Booking has been confirmed'); 
-                    window.location.href = 'user_profile.php';
+                    window.location.href = 'index.php';
                 </script>";
             }
             else{
@@ -26,7 +26,7 @@
 <div class="container">
     <div class="row checkout">
         
-            <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;6,500</span>
+            <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;1,000</span>
         </div></div>
     <div class="row checkout" style="position: relative; top: -60px;">
         <div class="col-md-4" style="background-color: #39406d; border-radius: 10px;">
