@@ -84,6 +84,7 @@ $id = $_REQUEST['id'];
             </th><th>
                 Drop Date
             </th>
+            <th>Drop Location</th>
             <?php
         
             $sql_fetch = "select * from user_journey where email = '".$_SESSION['user']."' AND card_number <> 0 order by id desc limit 1 ";
@@ -97,7 +98,7 @@ $id = $_REQUEST['id'];
                 <td><?php echo $data_fetch['address']; ?></td>
                 <td><?php echo $data_fetch['pick_date']; ?></td>
                 <td><?php echo $data_fetch['drop_date']; ?></td>
-          
+                <td><?php echo $data_fetch['Drop_location']; ?></td>  
             </tr>
                 <?php } ?>  
         </table>

@@ -6,12 +6,13 @@
             $email = $_POST['email'];
             $mobile= $_POST['mobile'];
             $address = $_POST['address'];
+            $drop = $_POST['Drop_location'];
             $pick_date = $_POST['pick_date'];           
             $drop_date = $_POST['drop_date'];
             $card_number = 0;
             
             
-            $sql = "insert into user_journey (name, email, mobile, address, pick_date, drop_date, card_number) values ('$name', '$email', '$mobile', '$address', '$pick_date',  '$drop_date', '$card_number')";
+            $sql = "insert into user_journey (name, email, mobile, address, pick_date, drop_date, card_number, Drop_location) values ('$name', '$email', '$mobile', '$address', '$pick_date',  '$drop_date', '$card_number', '$drop')";
             $run = mysqli_query($conn, $sql);
             if($run){
                 echo "<script> alert ('Your details have been saved');
@@ -24,7 +25,9 @@
         }
     if(isset($_SESSION['user'])){
        
-?>
+?><body onload="document.details.address.focus();">
+    
+
   <style>
       lable{
           font-size: 25px;
@@ -40,7 +43,7 @@
 </style>
   
    <div class="container">
-       <div class="row"><form action="" method="post">
+       <div class="row"><form action="" method="post" name="details">
        <?php  
             $sqli = "select * from userdetails where email = '".$_SESSION['user']."'";
             $run = mysqli_query($conn, $sqli);
@@ -64,18 +67,21 @@
            </div>
            <?php  } ?>
            <div class="col-md-6">
-                 <h1>Select your location</h1>
-    
         <div class="form-group">
+           <lable>Select Pick Up Location</lable>
             <input type="text" class="form-control" placeholder="Search Location..." name="address" id="search_address" required="">
             <script>
         function autocompleteAddress(){
             var input = document.getElementById('search_address');
             var Autocomplete = new google.maps.places.Autocomplete(input);
         }
-</script>
+</script>       
         </div>
         <hr>
+        <div class="form-group">
+            <lable>Select Drop Location</lable>
+            <input type="text" class="form-control" placeholder="Search Location..." name="Drop_location" id="search_address" required="">
+        </div><hr>
         <div class="form-group">
             <lable>Pickup Date</lable>
             <input type="text" class="form-control" name="pick_date" required="" id="date" placeholder="mm-dd-yyyy">
@@ -90,7 +96,7 @@
         <hr>
         
         <div class="form-group">
-            <a href="car_booking.php"><input type="submit" class="btn btn-success" value="NEXT" name="submit"></a>
+            <input type="submit" class="btn btn-success" value="NEXT" name="submit">
         </div>
            </div>
            </form>
@@ -105,6 +111,8 @@
                 minDate : 0
             });
         </script>
+        <center><p><b>Note: </b><sup style="color: red;">*</sup>Please enter Indian cities Only in the location sections, otherwise your booking has been rejected</p></center>
+        </body>
 <?php
     include('footer.php');
     }

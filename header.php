@@ -22,9 +22,12 @@
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
-         <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+         <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
                         <!--  External CSS File    -->
- <link rel="stylesheet" href="style.css">                        
+ <link rel="stylesheet" href="style.css">                     
+   
+      <link rel="stylesheet" href="CSS/lightbox.min.css">   
+      <script src="js/lightbox-plus-jquery.min.js"></script>
     </head>
     <body>
                          <!------------------------------------   Header Section   ------------------------->
