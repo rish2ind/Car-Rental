@@ -86,7 +86,7 @@ $id = $_REQUEST['id'];
             </th>
             <?php
         
-            $sql_fetch = "select * from user_journey where email = '".$_SESSION['user']."' AND card_number <> 0 ";
+            $sql_fetch = "select * from user_journey where email = '".$_SESSION['user']."' AND card_number <> 0 order by id desc limit 1 ";
             $run_fetch = mysqli_query($conn, $sql_fetch);
             while($data_fetch = mysqli_fetch_array($run_fetch)){
         ?>

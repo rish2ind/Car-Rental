@@ -90,7 +90,7 @@
         <hr>
         
         <div class="form-group">
-            <input type="submit" class="btn btn-success" value="NEXT" name="submit">
+            <a href="car_booking.php"><input type="submit" class="btn btn-success" value="NEXT" name="submit"></a>
         </div>
            </div>
            </form>
