@@ -26,11 +26,26 @@ if(isset($_SESSION['user'])){
         
             <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;900</span>
         </div></div>
+        <div class="row">
+            <div class="row">
+           <?php
+            $driver_sql = "select * from driver_details";
+            $driver_run = mysqli_query($conn, $driver_sql);    
+            $driver_data = mysqli_fetch_array($driver_run);
+        
+        ?>
+            <h2>Booking Details</h2>
+            <lable><b>Name of Driver:  </b><input type="text" value="<?php echo $driver_data['Name']; ?>" readonly style="margin-left: 15px; text-align: center;"></lable><br>
+            <lable><b>Mobile Number:  </b><input type="text" value="<?php echo $driver_data['Mobile']; ?>" readonly style="margin-left: 15px; margin-top: 10px; text-align: center;"></lable><br>
+            <form action="" method="post" name="payment" onsubmit="return validate()">
+            <lable><b>Booking Id:  </b><input type="text" name="booking_id" value="<?php echo mt_rand(10000, 99999); ?>" readonly style="margin-left: 15px; margin-top: 10px; text-align: center;"></lable>
+        </div>
+        </div>
     <div class="row checkout" style="position: relative; top: -60px;">
         <div class="col-md-4" style="background-color: #39406d; border-radius: 10px;">
         <h3 style="color: white;">Payment Methods</h3><hr>
             <div class="payment">
-                <center><form action="" name="payment" method="post" onsubmit="return validate()">
+                <center>
                    <h4 style="color: white;">Card Payment</h4>
                     <div class="form-group">                         
                         <input type="text" name="card_number" class="form-control" id="cnumber" placeholder="Enter Card Number" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">

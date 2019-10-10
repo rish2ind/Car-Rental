@@ -3,7 +3,10 @@
     include('connect.php');
     if(isset($_SESSION['user'])){
 ?>
-
+<head>
+    <link rel="stylesheet" href="CSS/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+</head>
     <div class="container">
         <div class="row car-details">
             <div class="col-md-2 car-image">

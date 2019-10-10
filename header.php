@@ -26,8 +26,11 @@
                         <!--  External CSS File    -->
  <link rel="stylesheet" href="style.css">                     
    
+
+<!--
       <link rel="stylesheet" href="CSS/lightbox.min.css">   
       <script src="js/lightbox-plus-jquery.min.js"></script>
+-->
     </head>
     <body>
                          <!------------------------------------   Header Section   ------------------------->

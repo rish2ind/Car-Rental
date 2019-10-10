@@ -12,6 +12,12 @@ $id = $_REQUEST['id'];
     body{
         background-color: #f1f1f1;
     }
+    .row #driver, #driver1, #driver2{
+        border: 1px solid gray;
+        margin-left: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
 </style>
 <div class="container" style="background-color: white; border: 1px solid black;">
     <div class="row">
@@ -68,9 +74,35 @@ $id = $_REQUEST['id'];
             <div class="col-md-4"></div>
     </div><hr>
     <div class="row">
+        
+           <?php
+            $driver_sql = "select * from driver_details";
+            $driver_run = mysqli_query($conn, $driver_sql);    
+            $driver_data = mysqli_fetch_array($driver_run);
+        
+        ?><center><h2>Booking Details</h2></center>
+           <div class="col-md-4">
+            
+            
+        </div>
+        <div class="col-md-4">
+            <lable><b>Name of Driver:  </b><input id="driver" type="text" value="<?php echo $driver_data['Name']; ?>" readonly></lable><br>
+            <lable><b>Mobile Number:  </b><input id="driver1" type="text" value="<?php echo $driver_data['Mobile']; ?>" readonly></lable><br>
+            <?php
+        
+            $sql_fetch = "select * from user_journey where email = '".$_SESSION['user']."' AND card_number <> 0 order by id desc limit 1 ";
+            $run_fetch = mysqli_query($conn, $sql_fetch);
+            while($data_fetch = mysqli_fetch_array($run_fetch)){
+        ?>
+            <lable><b>Booking Id:  </b><input id="driver2" type="text" name="booking_id" value="<?php echo $data_fetch['booking_id']; ?>" readonly></lable>
+        </div>
+        <div class="col-md-4"></div>
+    </div><hr>
+    <div class="row">
         <center><h1>Your Bookings</h1></center>
         
         <table class="table table-bordered table-hover table-striped">
+           <th>Booking Id</th>
             <th>
                 Name
             </th><th>
@@ -85,13 +117,8 @@ $id = $_REQUEST['id'];
                 Drop Date
             </th>
             <th>Drop Location</th>
-            <?php
-        
-            $sql_fetch = "select * from user_journey where email = '".$_SESSION['user']."' AND card_number <> 0 order by id desc limit 1 ";
-            $run_fetch = mysqli_query($conn, $sql_fetch);
-            while($data_fetch = mysqli_fetch_array($run_fetch)){
-        ?>
-            <tr>
+            
+            <tr><td><?php echo $data_fetch['booking_id']; ?></td>
                 <td><?php echo $data_fetch['name']; ?></td>
                 <td><?php echo $data_fetch['email']; ?></td>
                 <td><?php echo $data_fetch['mobile']; ?></td>
@@ -104,7 +131,11 @@ $id = $_REQUEST['id'];
         </table>
     </div>
 </div>
-
+<script>
+    document.getElementById("driver").style.cursor = "not-allowed";
+    document.getElementById("driver1").style.cursor = "not-allowed";
+    document.getElementById("driver2").style.cursor = "not-allowed";
+</script>
 
 <?php
     include('footer.php');        
