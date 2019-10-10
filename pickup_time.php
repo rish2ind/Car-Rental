@@ -43,7 +43,7 @@
 </style>
   
    <div class="container">
-       <div class="row"><form action="" method="post" name="details">
+       <div class="row"><form action="" method="post" name="details" autocomplete="off">
        <?php  
             $sqli = "select * from userdetails where email = '".$_SESSION['user']."'";
             $run = mysqli_query($conn, $sqli);
@@ -73,7 +73,7 @@
             <script>
         function autocompleteAddress(){
             var input = document.getElementById('search_address');
-            var Autocomplete = new google.maps.places.Autocomplete(input);
+            new google.maps.places.Autocomplete(input);
         }
 </script>       
         </div>

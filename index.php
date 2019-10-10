@@ -27,15 +27,15 @@
 Drive yourself to an adventure and back in 4 simple steps</span></div>
             <div class="row" style="margin-top: 30px;">             
                 <div class="col-md-3 work">
+                   <i class="fas fa-info work-icon"></i>
+                    <p style="text-align: center">Enter Details</p>
+                    <p>Enter your pick up and drop location properly.</p>
+                </div>
+                <div class="col-md-3 work">
                    <i class="fas fa-car work-icon"></i>
                     <p style="text-align: center">BOOK</p>
                     <p>Search for and book a car on our site!</p>
-                </div>
-                <div class="col-md-3 work">
-                   <i class="far fa-id-badge work-icon"></i>
-                    <p style="text-align: center">UPLOAD LICENSE</p>
-                    <p>Upload your driver&#39;s license, and pay a small security deposit.</p>
-                </div>
+                </div>               
                 <div class="col-md-3 work">
                    <i class="fas fa-unlock-alt work-icon"></i>
                     <p style="text-align: center">UNLOCK</p>
