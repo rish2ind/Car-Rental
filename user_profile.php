@@ -49,22 +49,22 @@ $id = $_REQUEST['id'];
                         }
                     }                
                 ?>
-               <form action="" method="post">
+               <form action="" method="post" name="userProfile">
                 <div class="form-group">
                     <lable>Name : </lable>
-                    <input type="text" class="form-control" value="<?php echo $data['name'];  ?>" name="name">
+                    <input type="text" class="form-control" value="<?php echo $data['name'];  ?>" id="uname" name="name">
                 </div>
                 <div class="form-group">
                     <lable>Email : </lable>
-                    <input type="email" class="form-control" value="<?php echo $data['email'];  ?>" name="email">
+                    <input type="email" class="form-control" value="<?php echo $data['email'];  ?>" id="uemail" name="email">
                 </div>
                 <div class="form-group">
                     <lable>Password : </lable>
-                    <input type="text" class="form-control" value="<?php echo $data['password'];  ?>" name="password">
+                    <input type="text" class="form-control" value="<?php echo $data['password'];  ?>" id="upass" name="password">
                 </div>
                 <div class="form-group">
                     <lable>Mobile : </lable>
-                    <input type="number" class="form-control" value="<?php echo $data['mobile'];  ?>" name="mobile">
+                    <input type="number" class="form-control" value="<?php echo $data['mobile'];  ?>" id="umobile" name="mobile">
                 </div>
                 <div class="form-group">
                     
@@ -136,11 +136,10 @@ $id = $_REQUEST['id'];
     document.getElementById("driver1").style.cursor = "not-allowed";
     document.getElementById("driver2").style.cursor = "not-allowed";
 </script>
-
+<script src="user_profile_validation.js"></script>
 <?php
     include('footer.php');        
     }
-
 else{
     echo "<script> 
             alert('Please login First');

@@ -12,7 +12,7 @@
                <h2 style="color: white; text-align: center;">Sign In</h2>
                <p style="color: gold; text-align: center;">Sign in to your account</p>
             <div class="form-container">
-                <form action="" class="contact-form" method="post" name="signin_form">
+                <form action="" class="contact-form" method="post" name="signin_form" autocomplete="off">
                     
                     <div class="form-group">
                         <lable style="color: gold;">Email : </lable>
@@ -28,9 +28,9 @@
                         <input type="submit" class="btn btn-info" value="Sign In" name="signin" style="opacity: 1; margin-left: 40%;">
                     </div>
                 </form>
+                <center><a href="forgot_password.php" style="color: gold; font-size: 16px;">Forgot Password ?</a></center>
             </div>
-                     <center><a href="UserDetails.php" style="color: gold; font-size: 16px;">New User ?</a></center>  
-                  </div>
+                  <center><a href="UserDetails.php" style="color: gold; font-size: 16px;">New User ?</a></center>
                   <?php
           
         
@@ -53,7 +53,7 @@
                             }
                             else{
                                 echo "<script>
-                                    alert ('login failed');
+                                    alert ('Email or password is incorrect');
                                 </script>";
                             }
                         }
@@ -65,6 +65,8 @@
                 <div class="col-md-4 ">
                   
                 </div>  
-             </div>       
-        </div>
+                  </div>
+                 </div>
+                </div>
+        <script src="validateUserDetails.js"></script>
 </body>

@@ -10,7 +10,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4"><h2 style="color: white; text-align: center;">Sign Up</h2>
                        <p style="text-align: center; color: gold;">Sign up to become our customer</p>
-                    <form class="contact-form" method="POST" name="signup" onsubmit="return validate()">
+                    <form class="contact-form" method="POST" name="signup" onsubmit="return userDetailValidate()" autocomplete="off">
                     <div class="form-group ">
                         <lable style="color: gold;">Full Name : </lable>
                         <input type="text" class="form-control" id="fname" required="" name="name">
@@ -34,55 +34,29 @@
                         </span>
                         <span id="error_pass" style="color: red;"></span>
                     </div>
-                    
+                    <div class="form-group">
+                        <lable style="color: gold;">Confirm Password : </lable>
+                        <input id="confirmPasswordInput" type="password" class="form-control" required="" name="confirmPassword">
+                        <span onclick="confirmPasswordFunction()" style="float: right; position: relative; top: -23px; margin-right: 10px; cursor: pointer;">
+                            <i class="fas fa-eye" style="display: none;" id="hideeye1"></i>
+                            <i class="fas fa-eye-slash" id="hideeye2"></i>
+                        </span>
+                        <span id="error_pass" style="color: red;"></span>
+                    </div>
                     <div class="form-group">
                     
                         <input type="submit" class="btn btn-info" value="Sign Up" id="signupform" name="signup" style="opacity: 1; margin-left: 40%;">
                     </div>
                 </form>
-                <script>
-                function validate(){
-                    var mobile = document.signup.mobile.value;
-                    var pass = document.signup.password.value;
-                    var name = document.signup.name.value;
-                    if(isNaN(mobile)){
-                        alert ('Mobile no. should be a number');
-                        contact.focus();
-                        return false;
-                    }
-                    else if(mobile.length > 10 || mobile.length < 10){
-                        alert ('Mobile no. should contain 10 digit only');
-                        contact.focus();
-                        return false;
-                    }
-                    else if(pass.length > 10 || pass.length < 6 ){
-                        alert ('Password length should be more then 5 and less then 11');
-                        myInput.focus();
-                        return false;
-                    }
-                    else if(isNaN(name)){
-                        return true;
-                    }
-                    else{
-                        alert ('Name should have alphabet value ');
-                        fname.focus();
-                        return false;
-                    } 
-                        
-                }
-            </script>
         </div>
     </div>
     </div>
-     <?php
-                       
-                            
+     <?php                        
                         if(isset($_POST['signup'])){
                             $uname = $_REQUEST['name'];
                             $uemail = $_REQUEST['email'];
                             $upass = $_REQUEST['password'];
-                            $ucontact = $_REQUEST['mobile'];
-                                
+                            $ucontact = $_REQUEST['mobile'];                     
                                 $check = "select * from userdetails where email = '$uemail'";
                                 $check_mobile = "select * from userdetails where mobile = '$ucontact'";
                             
@@ -174,22 +148,9 @@
         ?>
         <br>
         <script>
-    function myFunction(){
-        var x = document.getElementById("myInput");
-        var y = document.getElementById("hide1");
-        var z = document.getElementById("hide2");
-        if(x.type === "password"){
-            x.type = "text";
-            y.style.display = "block";
-            z.style.display = "none";
-        }
-        else{
-            x.type = "password";
-            y.style.display = "none";
-            z.style.display = "block";
-        }
-    }
+    
 </script>
+ <script src="validateUserDetails.js"></script>
 </body>
 <?php
     include('footer.php');
