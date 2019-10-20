@@ -75,7 +75,7 @@ if(isset($_SESSION['user'])){
 else{
     echo "<script> 
             alert('Please login First');
-            window.location.href = 'UserDetails.php';
+            window.location.href = 'UserSignIn.php';
         </script>";
 }
 ?>

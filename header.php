@@ -22,11 +22,14 @@
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
         <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
-         <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
                         <!--  External CSS File    -->
  <link rel="stylesheet" href="style.css">                     
    
-
+                        <!--Google auto sign-in links-->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+                        <!--    Client ID    -->
+        <meta name="google-signin-client_id" content="1063728466703-ev5r67q55tvejmc9hmb017d47knqo9eg.apps.googleusercontent.com">                
 <!--
       <link rel="stylesheet" href="CSS/lightbox.min.css">   
       <script src="js/lightbox-plus-jquery.min.js"></script>
@@ -92,13 +95,13 @@
                                                
                                     ?>
                                     <li><a href="user_profile.php?id=<?php echo $data['id']; ?>">Welcome : <?php echo $data['name']; ?></a></li>
-                                     <li><a href="logout.php"><span class="glyphicon glyphicon-off" title="Logout"></span></a></li>
+                                     <li><a href="logout.php">Logout</a></li>
                                     <?php
                                 }
                                 else
                                 {
                                     ?>
-                                    <li><a href="UserDetails.php">Signup/login</a></li>
+                                    <li><a href="UserSignIn.php">SignIn</a></li>
                                     <?php
                                     
                                 }

@@ -1,4 +1,4 @@
-function validate(){
+function validate() {
             var card = document.payment.cnumber.value;
                     var cvv = document.payment.ccvv.value;
                     if(isNaN(card)){
@@ -27,3 +27,4 @@ function validate(){
                     } 
             
         }
+
