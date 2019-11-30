@@ -52,7 +52,7 @@
                         <input type="text" name="card_number" class="form-control" id="cnumber" placeholder="Enter Card Number" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
                     
                         <input type="text" name="CVV" class="form-control" id="ccvv" placeholder="CVV" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
-                        <input type="text" name="expire" class="form-control" placeholder="mm/yyyy" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="">
+                        <input type="text" name="expire" class="form-control" placeholder="mm/yyyy" style="width: 300px; padding: 18px; margin-bottom: 5px;" required="" id="expireDate">
                         <input type="submit" class="btn btn-success" name="book" value="Book">
                     </div>
                 </form></center>    
@@ -69,6 +69,16 @@
 </div>
 
     <script src="validation.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#expireDate').datepicker({
+                dateFormat: "mm/yy",
+                minDate: 0,
+                changeMonth: true,
+                changeYear: true
+            });
+        })
+    </script>   
         <center><sup style="color: red">*</sup>Page will be redirected automaticaly to the Car Booking page after 300 seconds.</center>
 </body>
 <?php
