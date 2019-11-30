@@ -84,14 +84,14 @@
         </div><hr>
         <div class="form-group">
             <lable>Pickup Date</lable>
-            <input type="text" class="form-control" name="pick_date" required="" id="date" placeholder="mm-dd-yyyy">
+            <input type="text" class="form-control" name="pick_date" required="" id="date" placeholder="dd-mm-yyyy">
         </div>
         <hr>
        
         <hr>
         <div class="form-group">
             <lable>Drop Date</lable>
-            <input type="text" class="form-control" name="drop_date" required="" id="date1" placeholder="mm-dd-yyyy">
+            <input type="text" class="form-control" name="drop_date" required="" id="date1" placeholder="dd-mm-yyyy">
         </div>
         <hr>
         
@@ -105,10 +105,14 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoQ_S7YXN4Cj0DLsjE2SWKn5zWL4WHoiw&libraries=places&callback=autocompleteAddress"></script>
  <script>
             $('#date').datepicker({
-                minDate : 0
+                minDate : 0,
+                dateFormat: "dd-mm-yy"
             });
             $('#date1').datepicker({
-                minDate : 0
+                minDate : 0,
+                dateFormat: "dd-mm-yy",
+                changeMonth: true,
+                changeYear: true
             });
         </script>
         <center><p><b>Note: </b><sup style="color: red;">*</sup>Please enter Indian cities Only in the location sections, otherwise your booking has been rejected</p></center>
