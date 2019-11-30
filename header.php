@@ -66,7 +66,7 @@
          <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 logo">
-                    <img src="Images/logo.png" alt="" height="100px" >
+                    <a href="index.php"><img src="Images/logo.png" alt="" height="100px" ></a>
                 </div>
                 <div class="col-md-9"  style="padding: 0px; border: none; outline: none;">
                     <nav class="navbar navbar-default navigation">
