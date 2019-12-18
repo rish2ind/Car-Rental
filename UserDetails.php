@@ -89,7 +89,7 @@
                         }
                         
                   ?>
-                   <center> <span style="color: gold; font-size: 18px;">Already a member ?</span> &nbsp;<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Sign In</button></center>
+                   <center> <span style="color: gold; font-size: 18px;">Already a member ?&nbsp;<a style="color: gold;" href="UserSignIn.php"> Sign In</a></span> &nbsp;</center>
                  <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
