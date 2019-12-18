@@ -2,6 +2,9 @@
     include('header.php');
     include('connect.php');
     if(isset($_SESSION['user'])){
+        $id = $_REQUEST['id'];
+        $sqlfinal = "select * from car_details where id = '$id'";
+        $runfinal = mysqli_query($conn, $sqlfinal);
         if(isset($_POST['book'])){
             $card_number = $_POST['card_number'];
             $cvv = $_POST['CVV'];
@@ -26,15 +29,14 @@
 
 <div class="container">
     <div class="row checkout">
-        
-            <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;1,000</span>
+        <?php $datafinal = mysqli_fetch_array($runfinal); ?>
+            <div style="background-color: #c6ffc6; padding: 15px; font-size: 18px;">Total Amount : <span style="float: right;"><i class="fas fa-rupee-sign"></i>&nbsp;<?php echo $datafinal['price']; ?></span>
         </div></div>
         <div class="row">
            <?php
             $driver_sql = "select * from driver_details";
             $driver_run = mysqli_query($conn, $driver_sql);    
-            $driver_data = mysqli_fetch_array($driver_run);
-        
+            $driver_data = mysqli_fetch_array($driver_run);            
         ?>
             <h2>Booking Details</h2>
             <lable><b>Name of Driver:  </b><input type="text" value="<?php echo $driver_data['Name']; ?>" readonly style="margin-left: 15px; text-align: center;"></lable><br>
@@ -60,9 +62,9 @@
     </div>    
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <center><img src="Images/honda.jpg" alt="" class="img-responsive"></center>
-                <center><h3>HONDA CITY</h3></center>
-                <center><h4>( 5 SEATER)</h4></center>
+            <center><img src="Admin/Gallery/<?php echo $datafinal['pic']; ?>" alt="" class="img-responsive"></center>
+                <center><h3><?php echo $datafinal['name']; ?></h3></center>
+                <center><h4>( <?php echo $datafinal['seat']; ?> SEATER)</h4></center>
         </div>
     </div>
     <a href="#"><center><button class="btn btn-success" style="position: relative; top: -100px;">BOOK NOW</button></center></a>
