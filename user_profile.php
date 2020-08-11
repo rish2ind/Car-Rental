@@ -51,19 +51,19 @@ $id = $_REQUEST['id'];
                 ?>
                <form action="" method="post" name="userProfile">
                 <div class="form-group">
-                    <lable>Name : </lable>
+                    <label>Name : </label>
                     <input type="text" class="form-control" value="<?php echo $data['name'];  ?>" id="uname" name="name">
                 </div>
                 <div class="form-group">
-                    <lable>Email : </lable>
+                    <label>Email : </label>
                     <input type="email" class="form-control" value="<?php echo $data['email'];  ?>" id="uemail" name="email">
                 </div>
                 <div class="form-group">
-                    <lable>Password : </lable>
+                    <label>Password : </label>
                     <input type="text" class="form-control" value="<?php echo $data['password'];  ?>" id="upass" name="password">
                 </div>
                 <div class="form-group">
-                    <lable>Mobile : </lable>
+                    <label>Mobile : </label>
                     <input type="number" class="form-control" value="<?php echo $data['mobile'];  ?>" id="umobile" name="mobile">
                 </div>
                 <div class="form-group">
@@ -118,7 +118,24 @@ $id = $_REQUEST['id'];
             </th>
             <th>Drop Location</th>
             
-            <tr><td><?php echo $data_fetch['booking_id']; ?></td>
+            <tr><td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><?php echo $data_fetch['booking_id']; ?></button>
+                   <div class="modal fade" id="myModal" role="dialog">
+                       <div class="modal-dialog modal-lg">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <button class="close" type="button" data-dismiss="modal">&times;</button>
+                                   <h2>Your Booking Details</h2>
+                               </div>
+                               <div class="modal-body">
+                                   <p>THis is modal</p>
+                               </div>
+                                <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+                           </div>
+                       </div>
+                   </div>
+               </td>
                 <td><?php echo $data_fetch['name']; ?></td>
                 <td><?php echo $data_fetch['email']; ?></td>
                 <td><?php echo $data_fetch['mobile']; ?></td>

@@ -21,5 +21,5 @@ function validateUserUpdateProfile(){
      else{
          alert ('Name should have alphabet value ');
          return false;
-    } 
+     } 
 }
