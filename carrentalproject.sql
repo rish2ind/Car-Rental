@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2019 at 01:16 PM
+-- Generation Time: Mar 05, 2020 at 06:07 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -58,17 +58,17 @@ CREATE TABLE IF NOT EXISTS `car_details` (
   `rate` varchar(50) NOT NULL,
   `price` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `car_details`
 --
 
 INSERT INTO `car_details` (`id`, `pic`, `name`, `seat`, `type`, `bags`, `minimum`, `rate`, `price`) VALUES
-(3, 'honda.jpg', 'Honda City', 5, 'Sedan', 4, '1,000 for 100 KM', '15 Rs./KM', 1000),
 (4, 'hyundai.jpg', 'Maruti Alto K10', 5, 'Mini', 2, '900 for 100 KM', '10 Rs./KM', 900),
 (5, 'mahindra1.jpg', 'Hyundai Creta', 5, 'SUV', 4, '1,500 for 100 KM', '20 Rs./KM', 1500),
-(6, 'tata.jpg', 'TATA Safari', 9, 'SUV', 4, '2,500 for 100 KM', '30 Rs./KM', 2500);
+(6, 'tata.jpg', 'TATA Safari', 9, 'SUV', 4, '2,500 for 100 KM', '30 Rs./KM', 2500),
+(7, 'honda.jpg', 'Honda City', 5, 'Sedan', 4, '1000 for 100KM', '15', 1000);
 
 -- --------------------------------------------------------
 
@@ -103,16 +103,17 @@ CREATE TABLE IF NOT EXISTS `userdetails` (
   `mobile` bigint(15) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `userdetails`
 --
 
 INSERT INTO `userdetails` (`id`, `name`, `email`, `mobile`, `password`) VALUES
-(1, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Rishabh2ind'),
+(1, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8560838257, 'Rishabh2ind'),
 (2, 'Himanshu ', 'himanshu@gmail.com', 1234567890, 'himanshu'),
-(3, 'Hemant Singh', 'hemant@gmail.com', 9876890978, 'hemant');
+(3, 'Hemant Singh', 'hemant@gmail.com', 9876890978, 'hemant'),
+(4, 'Toshika mathur', 'toshika@gmail.com', 8560838179, 'varsha');
 
 -- --------------------------------------------------------
 
@@ -134,20 +135,26 @@ CREATE TABLE IF NOT EXISTS `user_journey` (
   `expire` varchar(255) NOT NULL,
   `Drop_location` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `user_journey`
 --
 
 INSERT INTO `user_journey` (`id`, `booking_id`, `name`, `email`, `mobile`, `address`, `pick_date`, `drop_date`, `card_number`, `CVV`, `expire`, `Drop_location`) VALUES
-(1, 25117, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8560838257, 'Pratap nagar', '10/11/2019', '10/15/2019', 1234567890123456, 543, '12/2028', 'Ajmer'),
-(3, 25117, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Jaipur', '10/22/2019', '10/24/2019', 1234567890123456, 543, '12/2028', 'Ajmer'),
-(4, 25117, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Ajmer Sharif Dargah, dargah shareef, Diggi Bazaar, Ajmer, Rajasthan', '11/28/2019', '11/29/2019', 1234567890123456, 543, '12/2028', 'Jaipur'),
-(5, 25117, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Pratap Nagar, Jaipur, Rajasthan, India', '11/30/2019', '12/03/2019', 1234567890123456, 543, '12/2028', 'Ajmer'),
-(6, 25117, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Jaipur', '04-12-2019', '06-12-2019', 1234567890123456, 543, '12/2028', 'Kashmir'),
+(1, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8560838257, 'Pratap nagar', '10/11/2019', '10/15/2019', 987654321876543, 564, '03/2020', 'Ajmer'),
+(3, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Jaipur', '10/22/2019', '10/24/2019', 987654321876543, 564, '03/2020', 'Ajmer'),
+(4, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Ajmer Sharif Dargah, dargah shareef, Diggi Bazaar, Ajmer, Rajasthan', '11/28/2019', '11/29/2019', 987654321876543, 564, '03/2020', 'Jaipur'),
+(5, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Pratap Nagar, Jaipur, Rajasthan, India', '11/30/2019', '12/03/2019', 987654321876543, 564, '03/2020', 'Ajmer'),
+(6, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Jaipur', '04-12-2019', '06-12-2019', 987654321876543, 564, '03/2020', 'Kashmir'),
 (7, 79852, 'Hemant Singh', 'hemant@gmail.com', 9876890978, 'Jaipur, Rajasthan, India', '04-12-2019', '13-12-2019', 1234567890123456, 567, '12/2028', 'Delhi'),
-(8, 0, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Kolkata, West Bengal, India', '18-12-2019', '20-12-2019', 0, 0, '', 'Goa');
+(8, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'Kolkata, West Bengal, India', '18-12-2019', '20-12-2019', 987654321876543, 564, '03/2020', 'Goa'),
+(9, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'surat', '19-12-2019', '21-12-2019', 987654321876543, 564, '03/2020', 'delhi'),
+(10, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'kolkata', '24-12-2019', '26-12-2019', 987654321876543, 564, '03/2020', 'delhi'),
+(11, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8756098123, 'delhi', '23-12-2019', '25-12-2019', 987654321876543, 564, '03/2020', 'jaipur'),
+(12, 69295, 'Toshika mathur', 'toshika@gmail.com', 8560838179, 'c-129, mangal marg, bapu nagar', '25-12-2019', '26-12-2019', 1258654725657539, 299, '12/2023', 'ajmer'),
+(13, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8560838257, 'ajmer', '26-02-2020', '28-02-2020', 987654321876543, 564, '03/2020', 'Jaipur'),
+(14, 14051, 'Rishabh Mathur', 'mathur.rishabh123@gmail.com', 8560838257, 'jaipur', '02-03-2020', '10-03-2020', 987654321876543, 564, '03/2020', 'Kolkata');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
